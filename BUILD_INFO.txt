@@ -1,0 +1,5 @@
+Product: Radio Harrow Myriad Search (Streamlit)
+Version: 1.0
+Source: Radio Harrow Myriad Search v4.6 Windows native
+Date: 09 October 2026
+Purpose: Browser-based public-link edition with Pad List CSV export.
