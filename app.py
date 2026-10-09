@@ -31,7 +31,7 @@ def load_catalogue():
 
 def export_csv(pad):
     output = io.StringIO(newline="")
-    writer = csv.writer(output, lineterminator="\\r\\n")
+    writer = csv.writer(output, lineterminator="\r\n")
     writer.writerow(EXPORT_COLUMNS)
     for item in pad:
         writer.writerow([item["MediaId"], item["Title"], item["Artists"], ""] + [""] * 14)
