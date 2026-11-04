@@ -1,4 +1,4 @@
-# Radio Harrow Myriad Search – Streamlit v1.0
+# Radio Harrow Myriad Search – Streamlit v1.0.2
 
 A browser-based version of the Windows v4.6 search, for presenters on Windows, Mac, Linux, tablets and phones.
 
