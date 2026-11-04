@@ -87,7 +87,13 @@ if len(results) > 0:
         selection_mode="single-row", on_select="rerun", key="search_grid",
     )
     selected_indices = event.selection.rows
-    selected = results.iloc[selected_indices[0]].to_dict() if selected_indices else None
+    # Search changes can leave a stale row selection from the previous results.
+    # Never index into a changed result set without validating the row number.
+    selected = None
+    if selected_indices:
+        row_index = selected_indices[0]
+        if isinstance(row_index, int) and 0 <= row_index < len(results):
+            selected = results.iloc[row_index].to_dict()
     left, right = st.columns([1, 1])
     with left:
         if st.button("➕ Add selected track to Pad List", type="primary", disabled=selected is None):
